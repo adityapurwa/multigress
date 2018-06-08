@@ -23,7 +23,7 @@ const ACTIONS = {
     type: TYPES.ADD_ROW
   }),
   removeRow: (index) => ({
-    type: TYPES.ADD_ROW,
+    type: TYPES.REMOVE_ROW,
     payload: index
   }),
   setRowData: (index, data) => ({
