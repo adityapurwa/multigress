@@ -1,0 +1,164 @@
+body {
+  background: url('../images/background.jpg');
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+$accent: #6634a9;
+
+.dashboard {
+  height: 96%;
+  width: 80%;
+  position: fixed;
+  left: 10%;
+  top: 2%;
+  margin: auto;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 12px 64px rgba(0, 0, 0, .33);
+
+  &--header {
+    flex: 0 0 auto;
+    padding: 16px;
+    background: $accent;
+    border-radius: 8px 8px 0 0;
+    opacity: 0.75;
+    &-title {
+      font-weight: 400;
+      color: #fff;
+    }
+  }
+
+  &--body {
+    background: rgba(255, 255, 255, 0.9);
+    flex: 1 1 0;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+
+    &-table {
+      box-sizing: border-box;
+      flex: 1 0 auto;
+      padding: 16px;
+      position: relative;
+      overflow-y: scroll;
+      height: 100%;
+      display: flex;
+    }
+    &-result {
+      display: block;
+      flex: 0 1 400px;
+      background: #EEEA;
+      border-left: solid 1px #ddd;
+    }
+  }
+  &--footer {
+    flex: 0 0 auto;
+    padding: 16px;
+    background: darken($accent, 15%);
+    color: #fff;
+    opacity: 0.75;
+    font-size: 0.75rem;
+
+  }
+}
+
+.table {
+  width: 100%;
+  background: #FFF;
+  border-radius: 8px;
+  overflow: hidden;
+  border: solid 1px transparentize($accent, 0.5);
+  border-spacing: 0;
+  text-align: center;
+  th {
+    background: $accent;
+    color: #fff;
+    font-weight: 700;
+    padding: 8px;
+  }
+  td {
+    padding: 8px;
+  }
+  tbody {
+    tr:nth-child(2n) {
+      background: #EEE;
+    }
+  }
+}
+
+.input {
+  width: 100px;
+  margin: auto;
+  border: solid 1px transparentize($accent, 0.75);
+  outline: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  color: #333;
+  font-weight: 400;
+  &:active, &:focus {
+    color: $accent;
+  }
+}
+
+.button {
+  background: $accent;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  text-transform: uppercase;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  &:hover {
+    background: lighten($accent, 10%);
+  }
+  &:active {
+    background: darken($accent, 10%);
+  }
+  &:active, &:focus {
+    box-shadow: 0 4px 8px transparentize($accent, 0.75);
+  }
+}
+
+.__block {
+  display: block;
+  width: 100%;
+}
+
+.regression-result {
+  padding: 16px;
+  &--label {
+    font-weight: 700;
+    opacity: 0.5;
+    margin-bottom: 4px;
+    font-size: 0.85rem;
+  }
+  &--equation {
+    display: block;
+    background: $accent;
+    color: #fff;
+    font-style: italic;
+    padding: 8px;
+    border-radius: 4px;
+  }
+  &--data {
+    display: block;
+    background: #EEE;
+    color: #333;
+    font-style: italic;
+    padding: 8px;
+    border-radius: 4px;
+  }
+  &--data, &--equation{
+    margin-bottom:8px;
+  }
+  &--plot {
+    margin: 16px 0;
+  }
+}

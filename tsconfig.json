@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "jsxFactory": "React.createElement",
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "target": "esnext"
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
