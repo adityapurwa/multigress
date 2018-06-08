@@ -14,7 +14,7 @@ export type FormulaData = {
 
 const TYPES = {
   ADD_ROW: 'TABLE/ADD_ROW',
-  REMOVE_ROW: 'TABLE/ADD_ROW',
+  REMOVE_ROW: 'TABLE/REMOVE_ROW',
   SET_ROW_DATA: 'TABLE/SET_ROW_DATA'
 };
 
